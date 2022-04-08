@@ -10,6 +10,6 @@ public class HelloController {
     @GetMapping("hello")
     public String hello(Model model){
         model.addAttribute("data", "hello!!!");
-        return "hello";
+        return "hello"; // hello.html이 자동으로 붙는다.
     }
 }
