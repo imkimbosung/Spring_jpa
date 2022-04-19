@@ -14,9 +14,9 @@ import javax.persistence.EntityManager;
 
 import static org.junit.Assert.*;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@Transactional
+@RunWith(SpringRunner.class) // Spring과 같이 실행여부
+@SpringBootTest // SpringBoot를 띄운 상태에서 테스트 하고싶을때 (autowired할떄 필요)
+@Transactional  // Test를 끝나면 자동 rollback하기 위해서
 public class MemberServiceTest {
 
     @Autowired MemberService memberService;
