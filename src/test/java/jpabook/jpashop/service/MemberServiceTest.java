@@ -39,7 +39,7 @@ public class MemberServiceTest {
     }
 
 
-    @Test
+    @Test(expected = IllegalStateException.class)
     public void 중복_회원_예외() throws Exception{
         // given
         Member member1 = new Member();
@@ -50,11 +50,7 @@ public class MemberServiceTest {
 
         // when
         memberService.join(member1);
-        try{
-            memberService.join(member2); // 예외 발생
-        } catch (IllegalStateException e){
-            return;
-        }
+        memberService.join(member2); // 예외 발생
 
 
         // then
