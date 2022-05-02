@@ -25,6 +25,9 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
+    /**
+     * 동적 쿼리를 적용하지 않음
+     */
     public List<Order> findAll(OrderSearch orderSearch){
 
         return em.createQuery("select o from Order o join o.member m" +
