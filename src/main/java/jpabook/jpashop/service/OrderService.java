@@ -65,7 +65,8 @@ public class OrderService {
     // 검색
     // 단순하게 조회기능만 한다면 바로 컨트롤러에서 호출해도 괜찮다.
     public List<Order> findOrders(OrderSearch orderSearch){
-        return orderRepository.findAll(orderSearch);
+//        return orderRepository.findAll(orderSearch);
+        return orderRepository.findAllByCriteria(orderSearch);
     }
 
 }
